@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+  body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 50px;
+}
+
+.top-bar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.top-bar li {
+  margin: 0 10px;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.top-bar a:hover {
+  color: blue;
+}
+
+.top-bar a.active {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.inbox {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.message.unread {
+  background-color: #f0f8ff;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message .date {
+  font-size: 12px;
+  color: gray;
+}
+
+.message .subject {
+  font-weight: bold;
+}
+
+.message .arrow {
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+
+/* New Styles for Club Member Home */
+.club-member-home {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.appeal-section,
+.monetary-fund-section,
+.attachment-section {
+  margin-bottom: 20px;
+}
+.club-selection-section select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.appeal-section textarea,
+.monetary-fund-section input,
+.attachment-section input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.attachment-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.balance-notifications {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.balance, .notifications {
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.balance h2, .notifications h2 {
+  margin: 0;
+  color: blue;
+  font-size: 24px;
+}
+
+.balance p, .notifications p {
+  margin: 10px 0 0;
+  color: gray;
+  font-size: 18px;
+
+}
+.appeal-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    <img src="C:\Users\arani\Downloads\hack\new\Indian_Institute_of_Technology_Mandi_Logo.png" alt="IITM Logo" class="logo">
+    <ul>
+      <li><a href="#" class="active">Appeals</a></li>
+      <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+  </div>
+
+  <form method="post" action="{{ url_for('submit_form') }}" enctype="multipart/form-data">
+    <!-- Your form inputs and elements go here -->
+    <div class="appeal-section">
+      <label for="appealTextarea">Write Your Appeal:</label>
+      <textarea id="appealTextarea" name="appealText" rows="4" cols="50"></textarea>
+    </div>
+  
+    <div class="monetary-fund-section">
+      <label for="fundInput">Required Monetary Fund:</label>
+      <input type="text" id="fundInput" name="monetaryFund">
+    </div>
+  
+    <div class="club-selection-section">
+        <label for="clubSelection">club name</label>
+        <input type="text" id="clubName" name="clubName">
+      </div>
+  
+    <div class="attachment-section">
+      <label for="attachmentInput">Attach PDF File:</label>
+      <input type="file" id="attachmentInput" name="attachmentFile" accept=".pdf">
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+
+
+</body>
+
+</html>

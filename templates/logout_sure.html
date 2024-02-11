@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 30px;
+        }
+        .box {
+            background-color: #d9d9d9;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+        .box button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Are you sure you want to log out?</p>
+        <a button href="{{url_for('index')}}">Yes</button>
+        <a button href="{{ previous_route }}">No</button>
+    </div>
+</body>
+</html>

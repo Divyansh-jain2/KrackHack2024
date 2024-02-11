@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+        }
+        .dropdown-toggle {
+            background-color: transparent;
+            border: none;
+            color: black;
+        }
+        .custom-button {
+            background-color: white !important;
+            color: black !important;
+            border: none !important;
+        }
+        .custom-button:hover {
+            background-color: grey !important;
+            color: black !important;
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .dropdown-submenu a::after {
+            transform: rotate(-90deg);
+            position: absolute;
+            right: 6px;
+            top: .8em;
+        }
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-left: .1rem;
+            margin-right: .1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Welcome to Student Gymkhana IIT MANDI</h1>
+        <p class="lead">Please select your page:</p>
+        <div class="btn-group">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="clubsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Clubs
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="clubsDropdown">
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Literary</a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Quriosity</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Uhlekh</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">TSOD</a>
+                            <!-- Add more literary clubs here -->
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Cultural</a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Dance</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Music</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Drama</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Designotes</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Artgeeks</a>
+                            <!-- Add more cultural clubs here -->
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Technical</a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for('login') }}">GDSC</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">KP</a>
+                            <!-- Add more technical clubs here -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- ... rest of your code ... -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="clubFADropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Club FA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="clubsDropdown">
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Literary</a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Quriosity</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Uhlekh</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">TSOD</a>
+                            <!-- Add more literary clubs here -->
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Cultural</a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Dance</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Music</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Drama</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Designotes</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Artgeeks</a>
+                            <!-- Add more cultural clubs here -->
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Technical</a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for('login') }}">GDSC</a>
+                            <a class="dropdown-item" href="{{ url_for('login') }}">KP</a>
+                            <!-- Add more technical clubs here -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="societyFADropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Society FA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="societyFADropdown">
+                    <!-- Add dropdown items here -->
+                    <a class="dropdown-item" href="{{ url_for('login') }}">Technical</a>
+                    <a class="dropdown-item" href="{{ url_for('login') }}">Cultural</a>
+                    <a class="dropdown-item" href="{{ url_for('login') }}">Literary</a>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="secretaryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Secretary
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="secretaryDropdown">
+                    <a class="dropdown-item" href="{{ url_for('login') }}">Literary</a>
+                    <a class="dropdown-item" href="{{ url_for('login') }}">Cultural</a>
+                    <a class="dropdown-item" href="{{ url_for('login') }}">Technical</a>
+                </ul>
+            </div>
+            <a class="btn btn-secondary custom-button" href="{{ url_for('login') }}">Chairsap</a>
+            <a class="btn btn-secondary custom-button" href="{{ url_for('login') }}">Dean Students</a>
+        </div>
+    </div>
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+            }
+            var $subMenu = $(this).next('.dropdown-menu');
+            $subMenu.toggleClass('show');
+
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                $('.dropdown-submenu .show').removeClass('show');
+            });
+
+            return false;
+        });
+    </script>
+</body>
+</html>
